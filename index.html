@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEI ZUO's CV</title>
+    <style>
+        /* 基础样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+            body, h1, h2, p, ul, li {
+            list-style: none;
+        }
+
+        /* 字体和颜色主题 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #f0f2f5;
+            padding: 0.75em;
+            line-height: 1.6em;
+            font-size: 1em;
+        }
+
+        /* 容器设置 */
+        .container {
+            max-width: 50em;
+            max-height: 1600px;
+            margin: 1.5em auto;
+            padding: 1.5em;
+            background-color: #fff;
+            box-shadow: 0 0.6em 1.6em rgba(0,0,0,0.05);
+            border-radius: 0.6em;
+        }
+
+        /* 头部样式 */
+        header {
+            background-color: #0056b3;
+            color: #fff;
+            padding: 0.25em 0;
+            border-top-left-radius: 0.75em;
+            border-top-right-radius: 0.75em;
+            text-align: center;
+            line-height: 2em;
+        }
+
+        /* 分节标题 */
+        .section-h1 {
+            margin-top: 0.25em;
+            margin-bottom: 0.25em;
+        }
+
+        .section h2 {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 0.5em;
+            margin-top: 0.6em;
+            font-size: 1.25em;
+            border-radius: 0.5em;
+            margin-bottom: -0.375em;
+        }
+
+        .section-p {
+            padding: 0.5em;
+            line-height: 1.25em;
+            margin-bottom: -0.25em;
+        }
+
+        .special-list {
+            margin-bottom: -0.5em;
+            padding: 0.875em;
+        }
+
+        .special-indent {
+            text-indent: -2em;  /* 对这个项目应用负的文本缩进 */
+            padding-left: 2em;  /* 添加等量的左填充以抵消文本缩进 */
+            font-family: "Times New Roman";
+            text-align: justify;
+            line-height: 1.4em;
+            margin-bottom: 0.25em;
+        }
+
+        .special-indent2 {
+            text-indent: -2em;  /* 对这个项目应用负的文本缩进 */
+            padding-left: 2em;  /* 添加等量的左填充以抵消文本缩进 */
+            font-family: "Times New Roman";
+        }
+
+        .special-indent3 {
+            font-size: 1em;
+            text-indent: -2em;  /* 对这个项目应用负的文本缩进 */
+            padding-left: 2em;  /* 添加等量的左填充以抵消文本缩进 */
+            font-family: "Times New Roman";
+            text-align: justify;
+        
+        }
+
+        .special-indent4 {
+            list-style-type: disc;
+            padding-left: -0.6em; /* 添加左侧缩进 */
+            text-indent: -0.2em; /* 将文本和 bullet point 同时向左缩进 */
+            font-size: 1em;
+            font-family: "Times New Roman";
+            line-height: 1.4em;
+        }
+
+        .special-indent5 {
+            font-size: 1em;
+            text-indent: -2em;  /* 对这个项目应用负的文本缩进 */
+            padding-left: 2em;  /* 添加等量的左填充以抵消文本缩进 */
+            font-family: "Times New Roman";
+            text-align: justify;
+            line-height: 1.2em;
+            margin-bottom: 0.25em;
+        
+        }
+        .bold-blue-text {
+            font-weight: bold;
+            color: #0056b3
+        }
+
+        /* 联系方式样式 */
+        .contact a {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 0.4em 1em;
+            margin: 0.75em 0.4em;
+            border-radius: 0.4em;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            font-size: 0.875em;
+        }
+
+        .contact a:hover {
+            background-color: #0056b3;
+        }
+
+        
+        /* 响应式设计 */
+        @media (max-width: 48em) { /* 768px/16px = 48em */
+            .container {
+                width: 100%; /* 使容器在小屏幕上宽度为100% */
+                padding: 0.75em; /* 12px/16px = 0.75em */
+            }
+            body {
+                font-size: 0.875em; /* 14px/16px = 0.875em */
+            }
+            .section h2, .contact a {
+                font-size: 1em; /* 16px/16px = 1em */
+            }
+            header, .section-p {
+                padding: 0 0.625em; /* 10px/16px = 0.625em */
+            }
+            .special-list {
+                padding: 0 0.625em; /* 10px/16px = 0.625em */
+            }
+        }
+
+        /* 可能需要添加的其他响应式设置 */
+        @media (max-width: 30em) { /* 480px/16px = 30em */
+            /* 针对更小屏幕的额外调整 */
+            body {
+                font-size: 0.75em; /* 12px/16px = 0.75em */
+            }
+            .section h2, .contact a {
+                font-size: 0.875em; /* 14px/16px = 0.875em */
+            }
+        }
+        /* Flex容器样式 */
+        .header-content {
+            display: flex;
+            justify-content: space-between; /* 子元素之间的空间平均分布 */
+            align-items: center; /* 垂直居中 */
+            padding: 1em;
+        }
+
+        .text-content {
+            /* 如果需要，可以在这里添加样式 */
+            padding: 2em;
+        }
+
+        .profile-photo {
+            width: 120px; /* 根据需要调整 */
+            height: auto; /* 保持宽高比 */
+            /* 如有必要，可以添加额外的样式，比如边距 */
+            margin-right: 2em;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content"> <!-- Flex容器 -->
+                <div class="text-content"> <!-- 文字内容 -->
+                    <h1 class="section-h1">Wei Zuo</h1>
+                    <p class="section-p">Multidisciplinary Researchers | Sustainable Development Leader<br>
+                    No.20 Chengzhong Road, Jiading District, Shanghai 201899, China</p>
+                </div>
+                <img src="personphoto.png" alt="Wei Zuo" class="profile-photo">
+            </div>
+        </header>
+      
+        <div class="section about-me">
+            <h2>Background Information</h2>
+          	<ul class='special-list'>
+              <li class='special-indent'>Wei Zuo, born in October 2002, a native of Wuhan, Hubei, PRC. Now he is a <span class="bold-blue-text">Double-degree Undergraduate</span> in Shanghai University and also <span class="bold-blue-text">the Chairman of the Student Union</span> at SILC Business School.</li>
+              <li class='special-indent'>Under the supervison of A/Prof. Aiping Jiang, he has long-term interdisciplinary research experience mainly in <span class="bold-blue-text">Scientific Machine Learning & Deep Learning</span>, with four papers submitted to SCI journals recently.</li>
+              <li class='special-indent'>Awarded <span class="bold-blue-text">Shanghai Scholarship</span>, China International College Students “Internet+” Innovation and Entrepreneurship Competition <span class="bold-blue-text">Shanghai Silver Award</span>, National Business Elite Challenge International Trade Competition <span class="bold-blue-text">National Grand Prize</span>, and "Zhengda Cup" Market Research and Analysis Competition <span class="bold-blue-text">National First Prize</span>.</li>
+          	</ul>
+        </div>
+      
+        <div class="section educational-background">
+            <h2>Educational Background</h2>
+            <ul class='special-list'>
+                <li class='special-indent2'>2023.07-Present, <span class="bold-blue-text">Business</span>, UTS College, University of Technology Sydney</li>
+                <li class='special-indent2'>2021.09-Present, <span class="bold-blue-text">International Economics and Trade</span>, SILC Business School, Shanghai University</li>
+            </ul>
+        </div>
+      
+        <div class="section research">
+            <h2>Research Field</h2>
+            <ul class='special-list'>
+                <li class='special-indent3'><strong>Scientific Machine Learning & Deep Learning</strong></li>
+              	<ul class='special-indent3'>
+                	<li class='special-indent4'>Interpretability of classic models(Transformer, CNN, RNN...)</li>
+                	<li class='special-indent4'>Uncertainty Prediction with data features(small sample, high dimension, sparse data...)</li>
+              	</ul>
+                <li class='special-indent3'><strong>Climate Change and Smart Energy</strong></li>
+              	<ul class='special-indent3'>
+                	<li class='special-indent4'>Energy Demand Prediction and Energy system management with climate change impact.</li>
+                </ul>
+                <li class='special-indent3'><strong>Reliability and Maintenance</strong></li>
+              	<ul class='special-indent3'>
+                <li class='special-indent4'>RUL Prediction with applications in batteries, pavements, bearings and pumps.</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="section projects">
+            <h2>Project Experience</h2>
+            <ul class='special-list'>
+                <li class='special-indent3'><strong>Government Project:</strong></li>
+              		<ul class='special-indent3'>
+                    	<li class='special-indent4'>Assistant Tutor:Exploration of sustainable development path of Panzhou City<a href="tourism_research_report.html" title="Click for details">[Click for details]</a></li>
+              		</ul>
+                <li class='special-indent3'><strong>international Exchange Project:</strong></li>
+              		<ul class='special-indent3'>
+                  		<li class='special-indent4'>Major Participate:Field exchanges with UN agencies China and Wharton Business School<a href="Field exchanges with UN agencies in China and Wharton Business School.html" title="Click for details">[Click for details]</a></li>
+                    </ul>
+                <li class='special-indent3'><strong>Company Project: </strong></li>
+              		<ul class='special-indent3'>
+                  		<li class='special-indent4'>Data analyst:Xiaomi smart doorbell market breakthrough under homogeneous competition<a href="Xiaomi smart doorbell market breakthrough under homogeneous competition.html" title="Click for details">[Click for details]</a></li>
+                    </ul>
+                <li class='special-indent3'><strong>Social Project: </strong></li>
+              		<ul class='special-indent3'>
+                  	    <li class='special-indent4'>Major principal:Community publicity with the theme of climate change and SDGs<a href="Climate change and sustainable development theme Community publicity.html" title="Click for details">[Click for details]</a></li>
+                    </ul>
+            </ul>
+        </div>
+      
+        <div class="section representativework">
+            <h2>Representative work</h2>
+            <ul class='special-list'>
+                <li class='special-indent5'><span class="bold-blue-text">Wei Zuo</span>, Xuemin Xu, Aiping Jiang*, Grouping-maintenance of multi-components production system under ecological background, Journal of Industrial Engineering and Management <span class="bold-blue-text">(SCI Q2, Major Overhaul)</span><a href="multi_components_production_system_abstract.html" title="Click for details">[Click for details]</a></li>
+                <li class='special-indent5'><span class="bold-blue-text">Wei Zuo*</span>, A novel integrated method based on data augmentation and uncertainty prediction for pavement performance, Neural Computing and Applications <span class="bold-blue-text">(SCI Q2, Under Review)</span><a href="A novel integrated interval prediction method based on small and non-normality distributed datasets for pavement performance from the uncertainty perspective.html" title="Click for details">[Click for details]</a></li>
+                <li class='special-indent5'>Aiping Jiang*, <span class="bold-blue-text">Wei Zuo</span>, Yu Bai, Peiyu Ye, Xuemin Xu, Dual-channel Pricing Strategy in the Presence of a Peer-to-peer Secondary Market, Journal of Theoretical and Applied Electronic Commerce Research <span class="bold-blue-text">(SCI Q2, Under Review)</span><a href="multi_components_production_system_abstract.html" title="Click for details">[Click for details]</a></li>
+                <li class='special-indent5'>Aiping Jiang*, <span class="bold-blue-text">Wei Zuo</span>, Yuntong Fan, Xuemin Xu, Optimal Maintenance Policy for Two-stage Single-component System Subject to Extreme Shocks under Imperfect Inspection, Annals of Operations Research <span class="bold-blue-text">(SCI Q3, Under Review)</span><a href="Optimal Maintenance Policy for Two-stage Single-component System Subject to Extreme Shocks under Imperfect Inspection.html" title="Click for details">[Click for details]</a></li>
+            </ul>
+        </div>
+      
+        <div class="section contact">
+            <h3>Contact me
+            <a href="+86 17707231633">Phone: +86 17707231633</a>
+            <a href="mailto:WillZuo1029@gmail.com">Email: WillZuo1029@gmail.com</a></h3>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
